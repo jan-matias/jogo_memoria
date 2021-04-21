@@ -1,49 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Jogo da memoria</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css">
+<! DOCTYPE html >
+< html  lang = " pt-br " >
+< cabeça >
+    < meta  charset = " utf-8 " >
+    < title > Jogo da memoria </ title >
+        < meta  name = " viewport " content = " width = device-width, initial-scale = 1 " >
+    < link  href = " http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css " rel = " stylesheet " >
+    < link  rel = " stylesheet " href = " style.css " type = " text / css " >
 	
 
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container">
+    < script  src = " http://code.jquery.com/jquery-1.11.1.min.js " > </ script >
+    < script  src = " http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js " > </ script >
+</ head >
+< corpo >
+< div  class = " container " >
 	
-	<div id="picbox">
-	  <span id="boxbuttons">
-	    <span class="button">
-	      <span id="counter">0</span>
-	    </span>
-	    <span class="button">
-	      <a onclick="ResetGame();">Reset</a>
-	    </span> 
-	  </span>
-	  <div id="boxcard">
-	  </div>
-	</div>
-</div>
+	< div  id = " picbox " >
+	  < span  id = " boxbuttons " >
+	    < span  class = " button " >
+	      < span  id = " counter " > 0 </ span >
+	    </ span >
+	    < span  class = " button " >
+	      < A  onclick = " RESETgame (); " > Repor </ a >
+	    </ span > 
+	  </ span >
+	  < div  id = " boxcard " >
+	  </ div >
+	</ div >
+</ div >
 
-</body>
-<script>
+</ body >
+< script >
     
-var BoxOpened = "";
-var ImgOpened = "";
-var ImgFound = 0;
+var  BoxOpened  =  "" ;
+var  ImgOpened  =  "" ;
+var  ImgFound  =  0 ;
 
-var Source = "#boxcard";
+var  Source  =  "#boxcard" ;
 
-var score = 0;
-var ImgSource = [
-  "#fff",
-  "#000",
-  "red",
-  "blue",
+ pontuação  var =  0 ;
+var  ImgSource  =  [
+  "#fff" ,
+  "# 000" ,
+  "vermelho" ,
+  "azul" ,
   "orange",
   "pink",
   "yellow",
@@ -141,12 +140,12 @@ $(function() {
 
 for (var y = 1; y < 3 ; y++) {
     $.each(ImgSource, function(i, val) {
-        $(Source).append("<div id=card" + y + i + "><div style='background-color: "+val+";'></div></div>");
-    });
+        $ ( Fonte ) . append ( "<div id = card"  +  y  +  i  +  "> <div style = 'background-color:" + val + ";'> </div> </div>" ) ;
+    } ) ;
 }
-    $(Source + " div").click(OpenCard);
-    ShuffleImages();
-});
+    $ ( Fonte  +  "div" ) . clique em ( OpenCard ) ;
+    ShuffleImages ( ) ;
+} ) ;
 
-</script>
-</html>
+</ script >
+</ html >
